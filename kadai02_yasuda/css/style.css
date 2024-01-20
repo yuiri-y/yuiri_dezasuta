@@ -5,20 +5,9 @@
     justify-content: space-between;
     max-width: 960px;
     gap: 20px;
+    margin: 0 auto;
 }
-.box1 {
-    width: 300px;
-    height: 300px;
-    background-color: blue;
-}
-
-.box2 {
-    width: 300px;
-    height: 300px;
-    background-color: blue;
-}
-
-.box3 {
+.box-blue {
     width: 300px;
     height: 300px;
     background-color: blue;
@@ -30,35 +19,10 @@
     flex-wrap: wrap;
     max-width: 960px;
     gap: 20px;
+    margin: 0 auto;
 }
 
-.boxa {
-    width: 300px;
-    height: 300px;
-    background-color: red;
-}
-.boxb {
-    width: 300px;
-    height: 300px;
-    background-color: red;
-}
-.boxc {
-    width: 300px;
-    height: 300px;
-    background-color: red;
-    flex-wrap: wrap;
-}
-.boxd {
-    width: 300px;
-    height: 300px;
-    background-color: red;
-}
-.boxe {
-    width: 300px;
-    height: 300px;
-    background-color: red;
-}
-.boxf {
+.box {
     width: 300px;
     height: 300px;
     background-color: red;
@@ -92,17 +56,14 @@ li:first-child {
     @media screen and (max-width: 767px) {
         nav ul {
             flex-direction: column;
-            margin-left: 0%;
         }
 
         li + li {
             border-left: none;
             border-bottom: 1px solid #333;
-            margin-left: 0%;
         }
         li:first-child {
             border-bottom: 1px solid #333;
-            margin-left: 0%;
         }
     }
 }
