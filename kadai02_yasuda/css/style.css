@@ -50,7 +50,6 @@ li:first-child {
 @media screen and (max-width: 767px) {
     header {
         flex-direction: column;
-        margin-left: 0%;
     }
 
     @media screen and (max-width: 767px) {
