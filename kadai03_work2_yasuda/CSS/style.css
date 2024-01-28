@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* 全体要素のサイズ設定、背景、中央ぞろえ*/
+.box {
+    max-width: 960px;
+    background-color: #eeeeee;
+    margin: 0 auto;
+}
+
+/* タイトルのカラー、中央ぞろえ、余白*/
+h2 {
+    color: #00a4ac;
+    text-align: center;
+    padding: 30px;
+}
+
+/* 3つの枠を横並び、中央ぞろえ、余白 */
+.service {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* 写真の設定（真ん中だけ大きくなる…*/
+.pic {
+    width: 100%;
+    /* object-fit: contain;
+    width: 330px;
+    height: 220px; */
+}
+
+/* 白枠の色と余白 */
+.service_item {
+    background-color: #fff;
+    padding: 5px;
+}
+
+/* 写真の下枠のタイトル文字色と線 */
+
+.title {
+    color: #00a4ac;
+    border-left: 10px solid #00a4ac;
+    padding: 3px;
+}
+
+/* 写真の下枠のテキスト文字色と線 */
+.text {
+    padding: 5px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 400px) {
+    .service {
+        flex-direction: column;
+    }
+}
