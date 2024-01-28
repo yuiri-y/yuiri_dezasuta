@@ -28,11 +28,13 @@
     background-color: red;
 }
 
+/* タイトルとulの親であるheaderに横並びプロパティ */
 header {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px 10px 20px;
 }
+/* liたちの親であるulに横並びプロパティ */
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -43,6 +45,7 @@ li + li {
     padding: 10px 20px 10px 20px;
 }
 
+/* 最初の子要素だけ線なし */
 li:first-child {
     padding: 10px 20px 10px 20px;
 }
