@@ -23,12 +23,9 @@ h2 {
     padding: 30px;
 }
 
-/* 写真の設定（真ん中だけ大きくなる…*/
+/* 写真幅の設定 */
 .pic {
     width: 100%;
-    /* object-fit: contain;
-    width: 330px;
-    height: 220px; */
 }
 
 /* 白枠の色と余白 */

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DESIGN CAFE</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- 全体 -->
+  <div class="All">
+
+    <!-- header部分-->
+    <header id="header">
+
+
+      <!--headerのロゴとナビをひと固まりとする  -->
+      <div class="header__inner">
+
+        <!-- ロゴ部分を大見出しとする -->
+        <!-- aタグでリンク＝ロゴ写真をクリックすると、トップページに戻る -->
+        <h1>
+          <a href="./index.html">
+            <img src="./images/design_cafe_logo_header@2x.png" alt="design cafe">
+          </a>
+        </h1>
+
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#aboutus">ABOUT US</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#event">EVENT</a></li>
+            <li><a href="#access">ACCESS</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- キービジュアル画像の設定（今後jsでスライドショーになるためclass名つけておく -->
+      <div class="slider">
+        <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+      </div>
+    </header>
+
+
+    <!-- メインテーマ部分 -->
+    <div class="container">
+      <main>
+        <div class="container">
+          <p class="sub_title">Have a happy day From a cup of coffee.</p>
+          <h2 class="main_title">ハッピーに溢れる1日を<br>
+            1杯のコーヒーから。</h2>
+          <p class="main_text">
+            毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+            足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
+          </p>
+
+          <!-- about usの設定 -->
+          <section class="concept" id="aboutus">
+
+            <!-- メイン画像 -->
+            <div class="concept_1">
+              <img class="main_pic" src="images/about_us@2x-100.jpg" alt="コーヒーで乾杯している様子">
+            </div>
+
+            <!-- テキスト情報 -->
+            <div class="concept_2">
+              <h3>
+                <img class="logo_aboutus" src="images/about_us@2x.png" alt="about us">
+              </h3>
+
+              <p class="concept_title">私たちが提供する<br>こだわりのコーヒー</p>
+
+              <p class="concept_text">サービスを提供する上での想いや心がけていることなど、メッ
+                <br>セージを文章で紹介します。サービスを提供する上での想い
+                <br>や心がけていることなど、メッセージを文章で紹介します。サー
+                <br>ビスを提供する上での想いや心がけていることなど、メッセー
+                <br>ジを文章で紹介します。サービスを提供する上での想いや心
+                <br>がけていることなど、メッセージを文章で紹介します。サービス
+                <br>を提供する上での想いや心がけていることなど、メッセージを
+                <br>文章で紹介します。
+              </p>
+            </div>
+
+          </section>
+
+
+
+          <!-- menuの設定 -->
+          <section class="menu" id="menu">
+
+            <!-- ロゴをブロックレベルにするために囲む -->
+            <div class="logo_m">
+              <h3><img class="logo_menu" src="images/menu@2x.png" alt="menu"></h3>
+            </div>
+
+            <!-- メニュー3枠の設定 -->
+            <ul class="menu-box">
+
+              <li class="menu-list">
+                <div class="menu_pt">
+                  <img class="menu_pic" src="images/drink_sp@2x-100.jpg" alt="飲み物の写真">
+                  <h4 class="menu_title">Drink</h4>
+                </div>
+                <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+              </li>
+
+              <li class="menu-list">
+                <div class="menu_pt">
+                  <img class="menu_pic" src="images/food_sp@2x-100.jpg" alt="食べ物の写真 ">
+                  <h4 class="menu_title">Food</h4>
+                </div>
+                <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+              </li>
+
+              <li class="menu-list">
+                <div class="menu_pt">
+                  <img class="menu_pic" src="images/cake_sp@2x-100.jpg" alt="ケーキの写真">
+                  <h4 class="menu_title">Sweets</h4>
+                </div>
+                <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+              </li>
+
+            </ul>
+          </section>
+        </div>
+    </div>
+
+    <!-- gallery -->
+
+    <section class="gallery" id="gallery">
+      <div class="logo_g">
+        <h3><img class="logo_gallery" src="images/gallery@2x.png" alt="gallery"></h3>
+      </div>
+
+      <!-- 写真リスト -->
+      <ul class="gallery_photo">
+
+        <li class="g_list">
+          <img class="gallery_pic" src="images/pc_gallary_01-100.jpg" alt="ラテアート">
+        </li>
+
+        <li class="g_list">
+          <img class="gallery_pic" src="images/pc_gallary_02-100.jpg" alt="店内装飾">
+        </li>
+
+        <li class="g_list">
+          <img class="gallery_pic" src="images/pc_gallary_03-100.jpg" alt="店内の席の雰囲気">
+        </li>
+
+        <li class="g_list">
+          <img class="gallery_pic" src="images/pc_gallary_04-100.jpg" alt="コーヒー豆">
+        </li>
+
+        <li class="g_list">
+          <img class="gallery_pic" src="images/pc_gallary_05-100.jpg" alt="お客さんの様子">
+        </li>
+      </ul>
+    </section>
+
+    <!-- 新着情報欄 -->
+    <section class="event" id="event">
+
+      <div class="logo_e">
+        <h3><img class="logo_event" src="images/event@2x.png" alt="event"></h3>
+      </div>
+
+      <!-- ブロック要素 -->
+      <div class="event_box">
+
+        <!-- 要素内のイベントリスト
+        <dl class="event_list">
+
+          <div class="event_inner">
+            <dt class="event_time">2020.06.23</dt>
+            <dd class="event_title"><a href="##">7月はイベント出店のため0/0お休みします</a></dd>
+          </div>
+
+          <div class="event_inner">
+            <dt class="event_time">2020.03.15</dt>
+            <dd class="event_title"><a href="##">春の新商品新発売。話題のあのブランドとコラボ</a></dd>
+          </div>
+
+          <div class="event_inner">
+            <dt class="event_time">2020.02.06</dt>
+            <dd class="event_title"><a href="##">コーヒーの日で30％OFFイベントを開催［3日間限定］</a></dd>
+          </div>
+        </dl>
+      </div> -->
+
+        <!-- リストVer -->
+        <div class="event_list">
+
+          <ul>
+
+            <div class="event_inner">
+              <li>
+                <time datetime="2020-06-23">2020.06.23</time>
+                <a href="##">
+                  <span class="event_title">7月はイベント出店のため0/0お休みします</span>
+                </a>
+              </li>
+            </div>
+
+            <div class="event_inner">
+              <li>
+                <time datetime="2020-03-15">2020.03.15</time>
+                <a href="##">
+                  <span class="event_title">春の新商品新発売。話題のあのブランドとコラボ</span>
+                </a>
+              </li>
+            </div>
+
+            <div class="event_inner">
+              <li>
+                <time datetime="2020-02-06">2021.03.16</time>
+                <a href="##">
+                  <span class="event_title">コーヒーの日で30％OFFイベントを開催［3日間限定］</span>
+                </a>
+              </li>
+            </div>
+
+        </div>
+        </ul>
+
+    </section>
+
+    <!-- 地図の設定 -->
+
+    <section class="access" id="access">
+
+      <div class="logo_a">
+        <h3><img class="logo_access" src="images/access@2x.png" alt="event"></h3>
+      </div>
+
+      <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280306944966!2d139.76454451136698!3d35.68123617247292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1707577068499!5m2!1sja!2sjp"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+    <!-- フッターの設定 -->
+    <section class="footer">
+      <footer>
+
+        <div class="footer_top">
+
+          <div class="logo_area">
+            <img class="footer-logo" src="images/design_cafe_logo_footer@2x.png" alt="logo">
+          </div>
+
+          <div class="footer_right">
+            <p>OPEN 18:00 / CLOSE 24:00</p>
+            <p>〒150ｰ0022</p>
+            <p>東京都渋谷区東京南123デザインビルB1</p>
+            <p>MAIL:info@designcafe.tokyo</p>
+          </div>
+
+        </div>
+
+        <!-- ボタンの設定 -->
+        <div class="fotter-bottom">
+          <small>Ⓒ2021 DESIGN CAFE</small>
+        </div>
+
+
+      </footer>
+    </section>
+  </div>
+
+  <!-- もどるボタンの設定 -->
+  <p class="totop">
+    <a href="#header">
+      <img class="totop_bottom" src="images/to_top@2x.png" alt="totop">
+    </a>
+  </p>
+
+</body>
+
+</html>

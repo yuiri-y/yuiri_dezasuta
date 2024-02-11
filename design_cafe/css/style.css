@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+.All {
+    background-color: #e8d9bf;
+}
+
+/* header全体のスタイル */
+.header__inner {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+
+    /* 54/1990 = 0.02713568 左右のスペースを計測し画面に合わせるために%で指定*/
+    padding-left: 2.71%;
+    /* 145/1990 =0.07286432 */
+    padding-right: 7.28%;
+
+    /* ロゴの頭に余白調整 */
+    padding-top: 10px;
+
+    /* ロゴとナビバーの横並び */
+    align-items: center;
+
+    /* 特定の位置で浮きつつ、スクロールもされていく が、うぃどすが失われるので再設定！*/
+    position: absolute;
+    width: 100%;
+}
+
+/* ナビバーのスタイル */
+
+/* 全体横並びと間隔 */
+.header__nav ul {
+    display: flex;
+    gap: 60px;
+}
+
+/* 各リストの色とフォント個別設定 */
+.header__nav li {
+    color: #fff;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: bold;
+}
+
+/* ロゴの大きさ調整 画像はWだけ設定すれば縦も自動調整される */
+/* headerインナーの中にあるh1に対して設定する */
+.header__inner h1 {
+    width: 227px;
+}
+
+/* コンテナ全体の配置 */
+.container {
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+/* メインテーマ */
+/* 英語サブタイトル部分 */
+.sub_title {
+    padding-top: 104px;
+    text-align: center;
+    font-size: 23px;
+}
+
+/* メインタイトル部分 */
+.main_title {
+    padding-top: 64px;
+    text-align: center;
+    font-size: 82px;
+    line-height: 1.15;
+    letter-spacing: 0.1em;
+}
+
+/* メインテキスト部分 */
+.main_text {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 23px;
+    line-height: 1.65;
+    letter-spacing: 0.1em;
+}
+
+/* about us部分 */
+
+/* 画像グループとテキストグループの親に対して横並び */
+.concept {
+    display: flex;
+    padding-top: 100px;
+    align-items: flex-start;
+}
+
+/* aboutusロゴ */
+.logo_aboutus {
+    width: 272px;
+    padding: 50px 0 50px 0;
+}
+
+/* 乾杯コーヒー写真 */
+.main_pic {
+    width: 500px;
+    height: 560px;
+    align-items: flex-start;
+    object-fit: cover;
+    border-radius: 0 0 80px 0;
+}
+
+/* コンセプトテキストグループ */
+.concept_2 {
+    padding-left: 40px;
+}
+
+/* 「こだわりのコーヒー」テキスト */
+.concept_title {
+    font-size: 44px;
+    line-height: 1.38;
+}
+
+/* コンセプト説明テキスト */
+.concept_text {
+    font-size: 16px;
+    padding-top: 30px;
+    line-height: 1.56;
+}
+
+/* menu部分 */
+
+/* ロゴ中央ぞろえ */
+.logo_m {
+    text-align: center;
+}
+
+.logo_menu {
+    width: 151px;
+    padding-top: 100px;
+}
+
+/* 3つのmenu子を横並び、中央ぞろえ、余白 */
+.menu-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+/* menu写真の設定 pt=picture＆title*/
+.menu_pt {
+    position: relative;
+}
+
+.menu_pic {
+    width: 300px;
+    height: 200px;
+    border-radius: 0 40px 0 0;
+}
+
+.menu_title {
+    font-size: 38px;
+    color: #d30202;
+    position: absolute;
+    top: 70%;
+    left: 5%;
+}
+
+.menu_text {
+    padding-top: 40px;
+    line-height: 1.47;
+}
+
+/* ギャラリー */
+.gallery {
+    padding-top: 100px;
+    width: 100%;
+}
+
+/* ロゴ中央ぞろえ */
+.logo_g {
+    text-align: center;
+}
+
+.logo_gallery {
+    width: 245px;
+    padding-bottom: 25px;
+}
+
+/* 横並び指定 */
+.gallery_photo {
+    display: flex;
+    justify-content: center;
+}
+
+/* 写真のサイズ */
+.gallery_pic {
+    width: 384px;
+    height: 300px;
+}
+
+/* イベントロゴ */
+.event {
+    padding-top: 70px;
+}
+
+/* ロゴ親要素に中央揃え */
+.logo_e {
+    text-align: center;
+}
+
+/* ロゴ本体にサイズ指定 */
+.logo_event {
+    width: 171px;
+    padding-bottom: 40px;
+}
+
+/* イベント項目 */
+/* 枠要素の設定 */
+.event_box {
+    display: table;
+    width: 1000px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: solid 3px;
+}
+
+/* 親要素に横並び指定 */
+/* 上下中央ぞろえがうまく実装できません。 とりあえずパディングを仮置きしていますが、つまづいています */
+.event_inner {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    padding: 20px 0px 20px 0px;
+}
+
+.event_title {
+    margin-left: 40px;
+    border-bottom: solid 1px;
+}
+
+/* map */
+.logo_a {
+    text-align: center;
+}
+
+.logo_access {
+    width: 213px;
+    padding: 80px 0px 45px 0px;
+}
+
+.map {
+    width: 100%;
+    height: 471px;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+}
+
+/* フッター設定 余白、中央ぞろえ、枠のサイズ*/
+footer {
+    margin-top: 30px;
+    margin: 0 auto;
+    width: 100%;
+    height: 390px;
+    background-color: #fff;
+}
+
+/* フッターのロゴ設定 */
+.footer-logo {
+    width: 226px;
+}
+/* ロゴ部分とテキスト横並び */
+.footer_top {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    gap: 60px;
+}
+
+/* テキスト部分の設定 */
+.footer_right p {
+    font-size: 20px;
+    line-height: 1.95;
+}
+
+/* コピーライト */
+.fotter-bottom {
+    padding-top: 71px;
+    text-align: center;
+    padding-left: 200px;
+    font-size: 16px;
+}
+
+.totop_bottom {
+    width: 125px;
+    height: 125px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
