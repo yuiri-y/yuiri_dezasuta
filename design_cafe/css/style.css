@@ -92,21 +92,26 @@
 
 /* aboutusロゴ */
 .logo_aboutus {
-    width: 272px;
+    width: 54%;
     padding: 50px 0 50px 0;
 }
 
-/* 乾杯コーヒー写真 */
+/* コンセプト部分の乾杯コーヒー写真グループ */
+.concept_1 {
+    width: 50%;
+}
+
+/* width、heightはパーセンテージで親要素に対して設定！ （画像そのものに対して数値固定すると画面幅が変わってもそのサイズを維持して横スクロールが起きる）*/
 .main_pic {
-    width: 500px;
-    height: 560px;
-    align-items: flex-start;
-    object-fit: cover;
+    /* width: 500px;
+    height: 560px; */
+    /* object-fit: cover; */
     border-radius: 0 0 80px 0;
 }
 
-/* コンセプトテキストグループ */
+/* コンセプト部分　テキストグループ */
 .concept_2 {
+    width: 50%;
     padding-left: 40px;
 }
 
@@ -144,14 +149,18 @@
     padding-top: 40px;
 }
 
-/* menu写真の設定 pt=picture＆title*/
+/* menu写真の設定 pt=picture＆titleグループ*/
 .menu_pt {
     position: relative;
 }
 
+.menu_list {
+    width: 30%;
+}
+
 .menu_pic {
-    width: 300px;
-    height: 200px;
+    /* width: 300px;
+    height: 200px; */
     border-radius: 0 40px 0 0;
 }
 
@@ -170,7 +179,7 @@
 
 /* ギャラリー */
 .gallery {
-    padding-top: 100px;
+    padding: 100px 0px 0px;
     width: 100%;
 }
 
@@ -190,15 +199,21 @@
     justify-content: center;
 }
 
-/* 写真のサイズ */
-.gallery_pic {
-    width: 384px;
-    height: 300px;
+/* 写真のサイズ  ※Wをピクセルで設定しない。
+・全体100%に対して5枚の画像＝1枚あたり20%占めている
+・Wを決めたらハイトの設定はいらない、無理な改行で反映される。*/
+.g_list {
+    width: 20%;
 }
 
-/* イベントロゴ */
+/* .gallery_pic {
+    width: 384px;
+    height: 300px;
+} */
+
+/* イベントセクション部分（section範囲内でpaddingとっていたのはmenu-までなので、event部分も同様にする） */
 .event {
-    padding-top: 70px;
+    padding: 70px 10px 0px;
 }
 
 /* ロゴ親要素に中央揃え */
@@ -215,21 +230,21 @@
 /* イベント項目 */
 /* 枠要素の設定 */
 .event_box {
-    display: table;
-    width: 1000px;
-    height: 200px;
+    max-width: 1000px;
+    /* height: 200px; */
     margin: 0 auto;
     background-color: #fff;
     border: solid 3px;
 }
 
 /* 親要素に横並び指定 */
-/* 上下中央ぞろえがうまく実装できません。 とりあえずパディングを仮置きしていますが、つまづいています */
 .event_inner {
     display: flex;
-    justify-content: center;
     font-size: 23px;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 10px;
+    max-width: 730px;
+    margin: 0 auto;
+    line-height: 1.95;
 }
 
 .event_title {
@@ -249,8 +264,9 @@
 
 .map {
     width: 100%;
-    height: 471px;
+    /* height: 471px; */
     filter: grayscale(100%) invert(92%) contrast(83%);
+    vertical-align: bottom;
 }
 
 /* フッター設定 余白、中央ぞろえ、枠のサイズ*/
@@ -266,6 +282,7 @@ footer {
 .footer-logo {
     width: 226px;
 }
+
 /* ロゴ部分とテキスト横並び */
 .footer_top {
     display: flex;
