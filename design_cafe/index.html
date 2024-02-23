@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -41,23 +42,44 @@
         </nav>
       </div>
 
+      <!-- hamburgerをつくる -->
+      <div class="hamburger">
+        <span></span>
+      </div>
+
+      <nav class="header__nav-sp">
+        <ul>
+          <li><a href="#aboutus">ABOUT US</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#event">EVENT</a></li>
+          <li><a href="#access">ACCESS</a></li>
+        </ul>
+      </nav>
+
       <!-- キービジュアル画像の設定（今後jsでスライドショーになるためclass名つけておく -->
       <div class="slider">
-        <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+        <picture>
+          <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+          <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+        </picture>
       </div>
     </header>
+
+    <!-- 動かす -->
+
 
 
     <!-- メインテーマ部分 -->
     <div class="container">
       <main>
-        <div class="container">
+        <div class="box">
           <p class="sub_title">Have a happy day From a cup of coffee.</p>
           <h2 class="main_title">ハッピーに溢れる1日を<br>
             1杯のコーヒーから。</h2>
           <p class="main_text">
-            毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
-            足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
+            <span>毎日を丁寧に大切に過ごしたい。</span><span>だからこそ一杯一杯丁寧にコーヒーを入れ<br></span>
+            <span>足を運んでくれるお客さんには</span><span>落ち着く空間とこだわりのコーヒーを提供したい。</span>
           </p>
 
           <!-- about usの設定 -->
@@ -83,45 +105,66 @@
 
           </section>
 
+          <!-- about usのsp -->
+          <!-- about usの設定 -->
+          <section class="concept_sp" id="aboutus">
+            <h3>
+              <img class="logo_aboutus_sp" src="images/about_us@2x.png" alt="about us">
+            </h3>
 
-
-          <!-- menuの設定 -->
-          <section class="menu" id="menu">
-
-            <!-- ロゴをブロックレベルにするために囲む -->
-            <div class="logo_m">
-              <h3><img class="logo_menu" src="images/menu@2x.png" alt="menu"></h3>
+            <!-- メイン画像sp -->
+            <div class="concept_1_sp">
+              <img class="main_pic_sp" src="images/about_us@2x-100.jpg" alt="コーヒーで乾杯している様子">
             </div>
 
-            <!-- メニュー3枠の設定 -->
-            <ul class="menu-box">
+            <!-- テキスト情報sp -->
+            <div class="concept_2_sp">
+              <p class="concept_title_sp">私たちが提供する<br>こだわりのコーヒー</p>
 
-              <li class="menu-list">
-                <div class="menu_pt">
-                  <img class="menu_pic" src="images/drink_sp@2x-100.jpg" alt="飲み物の写真">
-                  <h4 class="menu_title">Drink</h4>
-                </div>
-                <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
-              </li>
+              <p class="concept_text_sp">
+                サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセーがけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+              </p>
+            </div>
 
-              <li class="menu-list">
-                <div class="menu_pt">
-                  <img class="menu_pic" src="images/food_sp@2x-100.jpg" alt="食べ物の写真 ">
-                  <h4 class="menu_title">Food</h4>
-                </div>
-                <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
-              </li>
 
-              <li class="menu-list">
-                <div class="menu_pt">
-                  <img class="menu_pic" src="images/cake_sp@2x-100.jpg" alt="ケーキの写真">
-                  <h4 class="menu_title">Sweets</h4>
-                </div>
-                <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
-              </li>
 
-            </ul>
-          </section>
+            <!-- menuの設定 -->
+            <section class="menu" id="menu">
+
+              <!-- ロゴをブロックレベルにするために囲む -->
+              <div class="logo_m">
+                <h3><img class="logo_menu" src="images/menu@2x.png" alt="menu"></h3>
+              </div>
+
+              <!-- メニュー3枠の設定 -->
+              <ul class="menu-box">
+
+                <li class="menu-list">
+                  <div class="menu_pt">
+                    <img class="menu_pic" src="images/drink_sp@2x-100.jpg" alt="飲み物の写真">
+                    <h4 class="menu_title">Drink</h4>
+                  </div>
+                  <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+                </li>
+
+                <li class="menu-list">
+                  <div class="menu_pt">
+                    <img class="menu_pic" src="images/food_sp@2x-100.jpg" alt="食べ物の写真 ">
+                    <h4 class="menu_title">Food</h4>
+                  </div>
+                  <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+                </li>
+
+                <li class="menu-list">
+                  <div class="menu_pt">
+                    <img class="menu_pic" src="images/cake_sp@2x-100.jpg" alt="ケーキの写真">
+                    <h4 class="menu_title">Sweets</h4>
+                  </div>
+                  <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+                </li>
+
+              </ul>
+            </section>
         </div>
     </div>
 
@@ -169,25 +212,25 @@
         <!-- リストVer -->
         <div class="event_list">
 
-          <ul>
+          <ul class="event_square">
             <li class="event_inner">
-              <time datetime="2020-06-23">2020.06.23</time>
               <a href="##">
+                <time datetime="2020-06-23">2020.06.23</time>
                 <span class="event_title">7月はイベント出店のため0/0お休みします</span>
               </a>
             </li>
 
 
             <li class="event_inner">
-              <time datetime="2020-03-15">2020.03.15</time>
               <a href="##">
+                <time datetime="2020-03-15">2020.03.15</time>
                 <span class="event_title">春の新商品新発売。話題のあのブランドとコラボ</span>
               </a>
             </li>
 
             <li class="event_inner">
-              <time datetime="2020-02-06">2020.02.06</time>
               <a href="##">
+                <time datetime="2020-02-06">2020.02.06</time>
                 <span class="event_title">コーヒーの日で30％OFFイベントを開催［3日間限定］</span>
               </a>
             </li>
@@ -247,6 +290,20 @@
       <img class="totop_bottom" src="images/to_top@2x.png" alt="totop">
     </a>
   </p>
+
+  <script>
+    $(function () {
+      $(".hamburger").on("click", function () {
+        $(".hamburger").toggleClass("open");
+        $(".header__nav-sp").fadeToggle();
+      });
+    }
+    )
+  </script>
+
+
+  </section>
+
 
 </body>
 

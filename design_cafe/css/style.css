@@ -150,10 +150,6 @@
 }
 
 /* menu写真の設定 pt=picture＆titleグループ*/
-.menu_pt {
-    position: relative;
-}
-
 .menu_list {
     width: 30%;
 }
@@ -164,16 +160,19 @@
     border-radius: 0 40px 0 0;
 }
 
+/* ネガティヴマージンで設定。＋は余白を作る、－は余白を詰める！ 
+もともといたh4の位置から、－20pxしている。浮かない*/
 .menu_title {
     font-size: 38px;
     color: #d30202;
-    position: absolute;
+    margin: -20px 0px 0px 10px;
+    /* position: absolute;
     top: 70%;
-    left: 5%;
+    left: 5%; */
 }
 
 .menu_text {
-    padding-top: 40px;
+    padding-top: 10px;
     line-height: 1.47;
 }
 
@@ -311,4 +310,294 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
+}
+
+/* はんばーがーめにゅー */
+.hamburger,
+.header__nav-sp {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .header__nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        top: 13px;
+        transition: 0.5s;
+    }
+
+    .hamburger span::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        top: -10px;
+        transition: 0.5s;
+    }
+
+    .hamburger span::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+
+    /* ばってんの動きを付けたい  */
+    .open span {
+        background-color: transparent;
+    }
+
+    .open span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .open span::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    /* 開いたときのメニュー */
+    .header__nav-sp {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #0303037d;
+    }
+    .header__nav-sp ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+    }
+
+    .header__nav-sp li {
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+            "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+        font-weight: bold;
+    }
+}
+
+.concept_sp,
+.logo_aboutus_sp,
+.concept_1_sp,
+.concept_2_sp,
+.main_pic_sp {
+    display: none;
+}
+
+/* レスポンシブ */
+/* 一個目のブレイクポイント */
+@media screen and (max-width: 1100px) {
+    .sub_title {
+        font-size: 17px;
+    }
+    .main_title {
+        font-size: 57px;
+        letter-spacing: 0.1em;
+    }
+
+    .main_text {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .concept_2 {
+        font-size: 37px;
+    }
+
+    .concept_text {
+        font-size: 16px;
+    }
+}
+
+/* 767pxでの見え方を設定 */
+@media screen and (max-width: 767px) {
+    /* 余白系消す*/
+    .container,
+    #gallery,
+    #event .main_pic,
+    .gallery_photo {
+        margin: 0px;
+        padding: 0px 10px;
+    }
+
+    /* メイン */
+    .sub_title {
+        font-size: 16px;
+        padding-top: 40px;
+    }
+
+    .main_title {
+        font-size: 35px;
+        text-align: center;
+        letter-spacing: 0.02rem;
+        padding-top: 30px;
+    }
+
+    .main_text {
+        font-size: 15px;
+        letter-spacing: 0.1rem;
+        padding-top: 20px;
+    }
+
+    .main_text span {
+        display: inline-block;
+    }
+
+    .main_pic_sp {
+        width: 100%;
+    }
+
+    /* about us の再設定 */
+    .concept {
+        display: none;
+    }
+
+    .concept_sp,
+    .logo_aboutus_sp,
+    .concept_1_sp,
+    .concept_2_sp,
+    .main_pic_sp {
+        display: block;
+    }
+
+    .logo_aboutus_sp {
+        padding-top: 70px;
+        width: 42%;
+        margin: 0 auto;
+    }
+
+    .concept_title_sp {
+        padding-top: 30px;
+        font-size: 36px;
+        line-height: 1.25;
+    }
+
+    .concept_text_sp {
+        padding-top: 30px;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    /* menu部分 */
+    .main_pic_sp {
+        padding: 15px 0 0 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .logo_menu {
+        width: 23%;
+        padding-top: 50px;
+    }
+
+    #menu ul {
+        flex-direction: column;
+    }
+    #menu li {
+        width: 100%;
+        padding: 0 25px 25px 0px;
+    }
+
+    .menu_title {
+        font-size: 40px;
+    }
+
+    .menu_text {
+        font-size: 17px;
+        line-height: 1.58;
+    }
+
+    /* ギャラリー */
+    .logo_gallery {
+        width: 37%;
+        padding-top: 30px;
+    }
+
+    /* eventの設定 */
+    .logo_event {
+        width: 26%;
+        padding: 30px 0 0 0;
+    }
+
+    .event_box {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #event ul {
+        font-size: 16px;
+        padding: 0px 20px;
+    }
+
+    .event_title,
+    time {
+        display: block;
+    }
+
+    .event_title {
+        margin-left: 0px;
+        /* オーバーした要素を非表示にする*/
+        overflow: hidden;
+
+        /* 改行を半角スペースに変換することで、1行にする */
+        white-space: nowrap;
+
+        /* 幅を指定しないとテキストの長さによって要素の幅が変わるため指定 */
+        width: 89%;
+
+        /* オーバーしたテキストを３点リーダーにする */
+        text-overflow: ellipsis;
+    }
+
+    /* map */
+    .logo_access {
+        width: 33%;
+        padding: 25px 0 10px 0;
+    }
+    #access map {
+        width: 100vh;
+    }
+
+    .footer {
+        margin-bottom: 30px;
+    }
+    .footer_top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 45px 10px 0;
+    }
+
+    .footer_right p {
+        font-size: 18px;
+    }
 }
