@@ -238,7 +238,6 @@
 
 /* 親要素に横並び指定 */
 .event_inner {
-    display: flex;
     font-size: 23px;
     padding: 20px 10px;
     max-width: 730px;
@@ -439,16 +438,15 @@ footer {
 
 /* 767pxでの見え方を設定 */
 @media screen and (max-width: 767px) {
-    /* 余白系消す*/
-    .container,
-    #gallery,
-    #event .main_pic,
-    .gallery_photo {
-        margin: 0px;
-        padding: 0px 10px;
+    .container {
+        padding: 0px;
     }
 
     /* メイン */
+    .title_box {
+        padding: 0px 10px;
+    }
+
     .sub_title {
         font-size: 16px;
         padding-top: 40px;
@@ -488,6 +486,10 @@ footer {
         display: block;
     }
 
+    .concept_2_sp {
+        padding: 0px 10px;
+    }
+
     .logo_aboutus_sp {
         padding-top: 70px;
         width: 42%;
@@ -508,7 +510,7 @@ footer {
 
     /* menu部分 */
     .main_pic_sp {
-        padding: 15px 0 0 0;
+        padding-top: 15px;
         width: 100%;
         margin: 0 auto;
     }
@@ -523,7 +525,7 @@ footer {
     }
     #menu li {
         width: 100%;
-        padding: 0 25px 25px 0px;
+        padding: 0 25px 25px 25px;
     }
 
     .menu_title {
@@ -538,13 +540,17 @@ footer {
     /* ギャラリー */
     .logo_gallery {
         width: 37%;
-        padding-top: 30px;
+        padding-top: -10px;
     }
 
     /* eventの設定 */
+    .event {
+        padding: -40px 0px 0px 0px;
+    }
+
     .logo_event {
         width: 26%;
-        padding: 30px 0 0 0;
+        padding: 0px 0px -20px 0px;
     }
 
     .event_box {
@@ -560,6 +566,7 @@ footer {
     .event_title,
     time {
         display: block;
+        font-size: 16px;
     }
 
     .event_title {
@@ -570,9 +577,6 @@ footer {
         /* 改行を半角スペースに変換することで、1行にする */
         white-space: nowrap;
 
-        /* 幅を指定しないとテキストの長さによって要素の幅が変わるため指定 */
-        width: 89%;
-
         /* オーバーしたテキストを３点リーダーにする */
         text-overflow: ellipsis;
     }
@@ -580,7 +584,7 @@ footer {
     /* map */
     .logo_access {
         width: 33%;
-        padding: 25px 0 10px 0;
+        padding: 30px 0 10px 0;
     }
     #access map {
         width: 100vh;
@@ -599,5 +603,15 @@ footer {
 
     .footer_right p {
         font-size: 18px;
+    }
+
+    .fotter-bottom {
+        padding-right: 200px;
+        font-size: 16px;
+    }
+
+    .totop_bottom {
+        width: 100px;
+        height: 100px;
     }
 }
