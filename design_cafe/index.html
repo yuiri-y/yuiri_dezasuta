@@ -7,8 +7,18 @@
   <title>DESIGN CAFE</title>
 
   <link rel="stylesheet" href="./css/reset.css">
+
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <!-- lightbox -->
+  <link rel="stylesheet" href="css/lightbox.min.css">
+
   <link rel="stylesheet" href="./css/style.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -62,6 +72,11 @@
         <picture>
           <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
           <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+        </picture>
+
+        <picture>
+          <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+          <img src="./images/slider_2.jpg" alt="カフェ店内の様子">
         </picture>
       </div>
     </header>
@@ -181,24 +196,33 @@
       <ul class="gallery_photo">
 
         <li class="g_list">
-          <img class="gallery_pic" src="images/pc_gallary_01-100.jpg" alt="ラテアート">
+          <a href="images/pc_gallary_01-100.jpg" data-lightbox="photogallery" data-title="コーヒー"><img class="gallery_pic"
+              src="images/pc_gallary_01-100.jpg" alt="ラテアート"></a>
         </li>
 
         <li class="g_list">
-          <img class="gallery_pic" src="images/pc_gallary_02-100.jpg" alt="店内装飾">
+          <a href="images/pc_gallary_02-100.jpg" data-lightbox="photogallery" data-title="店内装飾"><img class="gallery_pic"
+              src="images/pc_gallary_02-100.jpg" alt="店内装飾"></a>
         </li>
 
         <li class="g_list">
-          <img class="gallery_pic" src="images/pc_gallary_03-100.jpg" alt="店内の席の雰囲気">
+          <a href="images/pc_gallary_03-100.jpg" data-lightbox="photogallery" data-title="店内の席の雰囲気"><img
+              class="gallery_pic" src="images/pc_gallary_03-100.jpg" alt="店内の席の雰囲気"></a>
         </li>
 
         <li class="g_list">
-          <img class="gallery_pic" src="images/pc_gallary_04-100.jpg" alt="コーヒー豆">
+          <a href="images/pc_gallary_04-100.jpg" data-lightbox="photogallery" data-title="コーヒー豆"><img
+              class="gallery_pic" src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></a>
         </li>
 
         <li class="g_list">
-          <img class="gallery_pic" src="images/pc_gallary_05-100.jpg" alt="お客さんの様子">
+          <a href="images/pc_gallary_05-100.jpg" data-lightbox="photogallery" data-title="お客さんの様子"><img
+              class="gallery_pic" src="images/pc_gallary_05-100.jpg" alt="お客さんの様子"></a>
         </li>
+
+        <li class="g_list">
+          <a href="images/pc_gallary_05-100.jpg" data-lightbox="photogallery" data-title="お客さんの様子"><img
+              class="gallery_pic" src="images/pc_gallary_05-100.jpg" alt="お客さんの様子"></a>
       </ul>
     </section>
 
@@ -299,12 +323,51 @@
           $(".hamburger").toggleClass("open");
           $(".header__nav-sp").fadeToggle();
         });
-      }
-      )
+      });
+
+      $(function () {
+        $(".slider").slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: false,
+          dots: true,
+        });
+      });
+
+      $(function () {
+        $(".gallery_photo").slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: false,
+          dots: false,
+          slidesToShow: 5,
+          responsive: [
+            {
+              breakpoint: 767, // 767px以下のサイズに適用
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        })
+      })
+
     </script>
   </div>
 
 
+  <!-- lightbox読み込み -->
+  <script src="js/lightbox.min.js"></script>
+
+  <!-- 左下の名称消す -->
+  <script>
+    lightbox.option({
+      //'オプション名': 値,
+      'showImageNumberLabel': false,
+      'wrapAround': true,
+
+    })
+  </script>
 
 </body>
 
